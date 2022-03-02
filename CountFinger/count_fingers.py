@@ -90,12 +90,12 @@ def main():
 
         video = detector.findHands(video)
 
-        lmList1 = detector.findPosition(video)
-        if len(lmList1) != 0:
+        lmList = detector.findPosition(video)
+        if len(lmList) != 0:
             detector.countFinger(video)
 
         cv2.imshow('Video', video)
-        if cv2.waitKey(25) & 0xFF == ord('q'):
+        if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
     cap.release()
