@@ -81,7 +81,7 @@ class HandDetector():
 
 def main():
 
-    cap = cv2.VideoCapture(2)
+    cap = cv2.VideoCapture(0)
 
     detector = HandDetector()
     while cap.isOpened():
